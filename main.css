@@ -1,0 +1,276 @@
+body{
+	background-image: url(https://stepn.com/img/bg.svg);
+	background-position-x: 50%;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+}
+
+a{
+	color: #1a73e8;
+	text-decoration: none;
+	outline: 0;
+}
+
+@font-face {
+    font-family: 'TTOctosquares';
+    src: local('TT Octosquares Black'), local('TT-Octosquares-Black'),
+        url('TTOctosquares-Black.woff2') format('woff2'),
+        url('TTOctosquares-Black.woff') format('woff'),
+        url('TTOctosquares-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TTOctosquaresV';
+    src: local('TT Octosquares Variable'), local('TT-Octosquares-Variable'),
+        url('TTOctosquaresVariable.woff2') format('woff2'),
+        url('TTOctosquaresVariable.woff') format('woff'),
+        url('TTOctosquaresVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/**/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes breathe { from { margin-left: -20%; } to { margin-left: 100%; }  }
+@keyframes breathe { 0% { transform: scale(1); } 50% { transform: scale(1.1); }  100% { transform: scale(1); }  }
+/**/
+
+/*lg*/
+.logo{
+	font-family: TTOctosquaresV;
+	position: absolute;
+	top: 25%;
+	cursor: default;
+	font-size: 32px;
+	scroll-margin-block: revert;
+	user-select: none;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+/**/
+
+/*btn*/
+
+.breathe {
+  animation: 2s linear 0s infinite normal none running breathe;
+}
+
+.join {
+  position: absolute;
+  right: calc(50% - 120px);
+  top: calc(50% - 45px);
+  height: 35px;
+  line-height: 35px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(35, 31, 32);
+  border-radius: 17.5px;
+  font-size: 24px;
+  letter-spacing: -0.2px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+  padding: 0px 10px;
+  font-family: TTOctosquares;
+  animation: 2s linear 0s infinite normal none running breathe;
+}
+
+/*modal*/
+.dtabGm {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.lmglUU {
+  position: relative;
+  width: 826px;
+  background-color: rgb(35, 31, 32);
+  color: rgb(255, 255, 255);
+  padding: 60px;
+  text-align: center;
+  font-family: TTOctosquares;
+  box-sizing: border-box;
+}
+
+.lmglUU .title {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.lmglUU .button {
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.lmglUU .button .item:first-child {
+  margin-right: 30px;
+}
+.lmglUU .button .item {
+  width: 200px;
+  height: 60px;
+  font-size: 26px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.lmglUU .button .item img {
+  margin-right: 8px;
+}
+
+.cZGhSG {
+  position: absolute;
+  top: -60px;
+  right: 32px;
+  cursor: pointer;
+}
+/*********************/
+
+
+
+
+/* Модальное окно */
+.modal-window{
+  display: inline-block;
+}
+.modal-window > .modal-trigger {
+  display: none;
+}
+.modal-window > .modal-trigger ~ .modal-overlay {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-window > .modal-trigger ~ .modal-container {
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 110;
+  position: fixed;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  transform: translate(-50%, -50%);
+}
+.modal-window > .modal-trigger:checked ~ .modal-overlay,
+.modal-window > .modal-trigger:checked ~ .modal-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* btn */
+.btn-modal {
+  color: #fff;
+  cursor: pointer;
+  line-height: 3rem;
+  padding: 1rem 3rem;
+  background-color: #83bec5;
+}
+.btn-modal:hover {
+  background-color: #527c82;
+}
+
+	/**/
+.desc_hash{
+	float: inline-start;
+	margin: 0 0 5px 0;
+}
+
+
+.modal_new > div {
+  float: inline-start;
+  box-sizing: border-box;
+  padding: 2%;
+}
+
+
+
+.modal_new_l{
+	width: 65%;
+}
+
+.modal_new_r{
+	width: 35%;
+}
+
+.pin {
+  width: 100%;
+  line-height: 24px;
+}
+
+.btnduwnx{
+	width: 100%;
+	height: 60px;
+	font-size: 16px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	align-items: center;
+	margin-bottom: 10%;
+}
+
+	/**/
+
+/* Mdl win */
+.modal-content {
+  overflow: hidden; 
+  background-color: #fff;
+}
+.modal-content .modal-content-header,
+.modal-content .modal-content-body {
+  padding: 1rem 2rem;
+}
+
+/* Кнопка Закрыть */
+.modal-content .modal-content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content .modal-content-footer .item {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+}
+.modal-content .modal-content-footer .item.action {
+  background-color: #83bec5;
+  cursor: pointer;
+}
+.modal-content .modal-content-footer .item.action:hover {
+  background-color: #aed9e1;
+}
+     
+
